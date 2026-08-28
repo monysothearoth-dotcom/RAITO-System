@@ -1,0 +1,101 @@
+# Project TODO
+
+- [x] Inspect the supplied source archive and verify the required full-stack application structure.
+- [x] Integrate the Raito-FX Pro source into the managed full-stack project workspace.
+- [x] Review configuration, database schema, scheduled delivery integration, and required runtime secrets.
+- [x] Run type checking, unit tests, and production build; resolve any application issues found.
+- [x] Verify the principal application interface in the live development preview.
+- [x] Save a versioned project checkpoint and provide launch guidance.
+- [x] Provide concise launch guidance covering the build and start commands, secret configuration, database migrations, OAuth, and scheduled Telegram delivery.
+- [x] Inspect existing market, news, Telegram, persistence, and navigation patterns for the Auto Signal Analyze feature.
+- [x] Add persistent data structures, public live-ledger reads, and protected owner procedures for Auto Signal Analyze settings, outcomes, and delivery health.
+- [x] Implement indicator-backed technical, strategy, fundamental, and intelligence scoring for XAU/USD and BTC/USD, with TP/SL lifecycle tracking and Gold pre-news alerts.
+- [x] Add an authenticated scheduled monitoring route that performs analysis once and fans resulting updates to both the website and Telegram.
+- [x] Add an Auto Signal Analyze navigation entry and responsive live signal interface matching the existing dashboard design.
+- [x] Add regression coverage for signal qualification, low-confidence suppression, TP/SL outcomes, 15-minute pre-news alerts, and dual delivery behavior.
+- [x] Add protected delivery-health metrics so the owner can inspect pending, signal, and outcome Telegram delivery state.
+- [x] Validate the feature through type checks, tests, production build, and responsive live preview; document how to enable monitoring.
+- [x] Document the owner enablement flow, Telegram dependency, protected recurring monitor, and delivery-health review for Auto Signal Analyze.
+- [x] Review existing owner-only credential and API-provider settings patterns for Auto Signal Analyze configuration.
+- [x] Add secure server-side configuration support for Telegram bot token, Telegram chat ID, and four API credential slots.
+- [x] Superseded by the user’s backend-only requirement: do not add a browser credential-entry interface or return secret values to the website.
+- [x] Add tests and validation for protected credential configuration, then document the required credential labels and setup flow.
+- [x] Configure Telegram bot token, Telegram chat ID, and four API credentials as backend-only project secrets with no website or database disclosure.
+- [x] Configure GEMINI_API_KEY, OPENAI_API_KEY, ANTHROPIC_API_KEY, and OPENROUTER_API_KEY as backend-only Auto Signal Analyze credentials; direct xAI credentials are not used.
+- [x] Use separate AUTO_SIGNAL_TELEGRAM_BOT_TOKEN and AUTO_SIGNAL_TELEGRAM_CHAT_ID backend secrets for Auto Signal Analyze, leaving news-alert Telegram credentials unchanged.
+- [x] Configure OPENROUTER_API_KEY for the x-ai/grok-4.6 backend fallback and remove direct xAI validation from Auto Signal Analyze.
+- [x] Reconfirm the documented backend-only secret labels and OpenRouter Grok 4.6 routing before the final checkpoint.
+- [x] Inspect why News Alert delivery is not translating into Khmer and identify the affected setting, eligibility rule, or translation fallback.
+- [x] Repair Khmer translation for News Alert messages without affecting dedicated Auto Signal Analyze delivery.
+- [x] Add focused regression coverage and validate Khmer News Alert delivery behavior.
+- [x] Investigate and repair the existing users.displayName database-migration mismatch reported by the live OAuth callback, without conflating it with News Alert translation.
+- [x] Inspect the live Auto Signal and News Alert schedules, settings, delivery queues, and Khmer translation diagnostics for the reported missing delivery.
+- [x] Repair any enabled-state, scheduler, source, translation, or Telegram delivery fault affecting Auto Signal or Khmer News Alert delivery.
+- [x] Validate the repaired live-delivery prerequisites and document the exact owner activation and verification steps.
+- [x] Record that the existing owner News Alert schedule was refreshed and revalidated after publication, rather than claiming a new schedule was created in this phase.
+- [x] Reorder navigation so Auto Signal Analyze is followed by Signal Analyze, All in One AI Engine, AI Agent, and Economic Calendar & News, with all other functions after that group.
+- [x] Run navigation regression checks and verify the reordered feature group on desktop and mobile layouts.
+- [x] Save the navigation update and document the new feature order.
+- [x] Remove the global currency selector from the header and remove related unused header dependencies.
+- [x] Prevent the remaining header market-status indicators from colliding with the reordered navigation at desktop widths.
+- [x] Validate the simplified header on desktop and mobile layouts.
+- [x] Save the header simplification and document the removed control.
+
+REALITY CHECK:
+The Auto Signal and Khmer News Alert delivery items remain blocked on the user publishing the current server routes. The live Auto Signal heartbeat currently receives HTTP 404 until that publish step is completed.
+
+- [x] Sync the development preview to the latest shared-project version.
+- [x] Review the Alpha Vantage integration and add the provided API key as a backend-only project secret.
+- [x] Validate Alpha Vantage server-side market-data access and confirm the synchronized preview is healthy.
+- [x] Inspect the existing CoinGecko and IEX Cloud provider flow and all browser-facing override controls.
+- [x] Superseded by the two-provider plan: configure CoinGecko backend-only credentials and remove IEX Cloud because it is no longer a supported free provider.
+- [x] Remove provider API-key inputs and browser-persisted key overrides from the market-data interface.
+- [x] Validate the secure provider configuration and simplified interface through tests, build, and responsive preview.
+- [x] Verify the simplified two-provider market-data settings on a mobile viewport, confirming no API-key inputs or layout overflow.
+- [x] Remove IEX Cloud from provider configuration and retain only Alpha Vantage and CoinGecko as secure backend-only providers.
+- [x] Review the supplied EODHD API material for compatible market-data endpoints, authentication, rate limits, and licensing constraints.
+- [x] Confirm the official EODHD commercial-use prerequisite for any future public or business deployment.
+- [x] Defer EODHD integration by owner decision until a valid backend-only token and appropriate license are available; retain the current Alpha Vantage and CoinGecko configuration.
+- [x] Defer EODHD credential, contract, build, and responsive validation until the owner elects to activate the provider.
+- [x] Record that EODHD integration is deferred until the owner provides a valid EODHD API token; preserve Alpha Vantage and CoinGecko as the active backend-only providers.
+- [x] Inspect the Auto Signal Analyze, Signal Analyze, All-in-One AI Engine, AI Agent, Economic Calendar & News, All Assets, and Market Pulse implementations for the requested interface improvements.
+- [x] Move All Assets to the first primary workspace position while preserving direct navigation to all analysis tools.
+- [x] Rename AI Agent to RAITO Agent consistently in navigation and workspace presentation.
+- [x] Strengthen the primary analysis workspaces with clearer hierarchy, actionable controls, and concise live-context presentation.
+- [x] Reorganize the Market Pulse pair list into clean, readable market groups with stable ordering and responsive behavior.
+- [x] Add focused regression tests and validate the revised desktop and mobile interface before saving the update.
+- [x] Implement a substantive Economic Calendar & News workspace refinement with clear decision context, consolidated live-alert status, and updated validation evidence.
+- [x] Audit News Analyze mode for unsupported high-impact-event claims and trace the live evidence available to its shared market-analysis request.
+- [x] Pass verified calendar and headline evidence, including explicit no-high-impact-event states, into News Analyze mode.
+- [x] Strengthen the shared RAITO trading-research framework with structured evidence, uncertainty, invalidation, and risk-boundary requirements for RAITO Agent, Signal Analyze, and All-in-One.
+- [x] Strengthen Auto Signal AI review criteria without weakening deterministic confluence and lifecycle controls.
+- [x] Add regression coverage to prevent unsupported high-impact-news claims and validate the grounded trading-research contracts.
+- [x] Add verified market-news headline evidence to News Analyze mode and test that supplied headlines are used without inventing unavailable sources or events.
+- [x] Filter News Analyze headline evidence to the active symbol or market domain so unrelated crypto and Forex headlines cannot cross into the analysis.
+- [x] Add dual-domain regression and smoke validation confirming only symbol-relevant headlines enter News Analyze and empty or unavailable states remain truthful.
+- [x] Add route-level coverage for no-relevant-headline and unavailable-headline status mapping after symbol filtering, then validate the controlled evidence states.
+- [x] Verify the published Auto Signal Heartbeat callback no longer returns HTTP 404 and record its live execution status.
+- [x] Activate or inspect owner News Alert scheduling after publication and verify its callback path and delivery-health prerequisites.
+- [x] Diagnose why Auto Signal Analyze has not produced a Telegram notification by inspecting monitor eligibility, persisted candidates, queue state, and dedicated Telegram delivery results.
+- [x] Confirm that no Auto Signal Telegram delivery fault was present in the observed run; no repair was required because no candidate met the preserved deterministic thresholds.
+- [x] Add explicit Auto Signal monitor diagnostics for skipped candidates and validate a controlled no-delivery result caused by preserved eligibility thresholds rather than an unobserved fault.
+- [x] Add an end-to-end Auto Signal monitor regression asserting threshold rejection returns `created: 0`, `delivered: 0`, and the matching deterministic diagnostic.
+- [x] Confirm whether the supplied Claude code token is a valid Anthropic API key suitable for server-side application requests.
+- [x] Store a valid Claude API credential as the backend-only `ANTHROPIC_API_KEY` without adding browser controls or persistence.
+- [x] Defer successful Anthropic completion validation for the analysis and Khmer translation primary paths until the provider API account has available credit.
+- [x] Replace the incorrectly entered Claude credential with a valid backend-only Anthropic API key and re-run the provider validation.
+- [x] Validate Anthropic credential authentication and safe existing fallback behavior without exposing the key; defer direct completion validation by owner decision.
+- [x] Record that the Anthropic credential authenticates but the provider account cannot currently run completions, then verify safe fallback behavior until provider credits are available.
+- [x] Assess the current published build, production routes, scheduled delivery health, and provider prerequisites for a self-managed launch.
+- [x] Create a complete owner-facing self-launch checklist covering domain, visibility, authentication, secrets, Telegram schedules, AI/provider readiness, and post-launch monitoring.
+- [x] Verify the launch materials against the current deployment and save the final self-launch package.
+- [x] Inventory existing launch documents and current production-operating guidance for a consolidated owner package.
+- [x] Create a self-launch README, environment-variable template, launch checklist, scheduled-service operations guide, and release notes that never contain secret values.
+- [x] Validate the self-launch package contents, archive the deliverables, and provide the owner-accessible files.
+- [x] Create a self-launch release-notes document with shipped features, current version, known provider limits, and deferred EODHD status.
+- [x] Deliver the finalized self-launch archive and key owner files as accessible attachments after saving the documentation checkpoint.
+- [x] Mark Anthropic completion credit and EODHD token/licensing as owner-approved deferred launch prerequisites in the launch materials and checklist.
+- [ ] Audit the full Raito-FX Pro source tree and confirm the independent-launch handoff includes application code, migrations, tests, documentation, and configuration templates while excluding secrets and generated artifacts.
+- [ ] Create a complete independent-launch archive with a source manifest and handoff instructions.
+- [ ] Validate the independent-launch archive contents and deliver it as the complete owner handoff.
+- [ ] Exclude managed project metadata containing deployment credentials from the independent handoff archive while preserving all portable source and launch files.
